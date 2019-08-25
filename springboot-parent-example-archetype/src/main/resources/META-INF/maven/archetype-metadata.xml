@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+    xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+    name="springboot-parent-example"
+    xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <requiredProperties>
+    <requiredProperty key="springboot_version">
+      <defaultValue>2.1.6.RELEASE</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="snapshot_repository_url">
+      <defaultValue>http://localhost:8081/nexus/content/repositories/snapshots</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="snapshot_repository_id">
+      <defaultValue>snapshots</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="release_repository_url">
+      <defaultValue>http://localhost:8081/nexus/content/repositories/releases</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="release_repository_id">
+      <defaultValue>releases</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="mybatis_spring_boot_starter_version">
+      <defaultValue>2.1.0</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="java_version">
+      <defaultValue>1.8</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+</archetype-descriptor>

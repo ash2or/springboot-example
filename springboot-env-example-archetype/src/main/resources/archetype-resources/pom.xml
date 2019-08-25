@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+  <packaging>jar</packaging>
+  <description>环境配置模块</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-autoconfigure</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+  </dependencies>
+
+  <profiles>
+    <!-- 开发环境 -->
+    <profile>
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <profile.active>dev</profile.active>
+      </properties>
+    </profile>
+    <!-- 用户验收测试环境 -->
+    <profile>
+      <id>uat</id>
+      <properties>
+        <profile.active>uat</profile.active>
+      </properties>
+    </profile>
+    <!-- 生产环境 -->
+    <profile>
+      <id>prd</id>
+      <properties>
+        <profile.active>prd</profile.active>
+      </properties>
+    </profile>
+  </profiles>
+</project>
